@@ -17,18 +17,14 @@ CREATE TABLE tbl_medico (
     email_med VARCHAR (100) NOT NULL,
     cel_med VARCHAR (11) NOT NULL,
 	tel_med VARCHAR (10),
-	constraint tbl_medico_id_pk primary key (id_med),
-    constraint tbl_medico_id_esp_fk foreign key (id_esp)
-    references tbl_especialidade (id_esp)
+	constraint tbl_medico_id_pk primary key (id_med)
 );
 
 CREATE TABLE tbl_sala (
 	id_sala INT UNSIGNED AUTO_INCREMENT,
     id_esp INT UNSIGNED NOT NULL,
     num_sala VARCHAR (10) NOT NULL,
-    constraint tbl_sala_id_pk primary key (id_sala),
-    constraint tbl_sala_id_esp_fk foreign key (id_esp)
-    references tbl_especialidade (id_esp)
+    constraint tbl_sala_id_pk primary key (id_sala)
 );
 
 CREATE TABLE tbl_paciente (
@@ -47,9 +43,7 @@ CREATE TABLE tbl_insumo (
     id_pac INT UNSIGNED NOT NULL,
     nome_ins VARCHAR (100) NOT NULL,
     qtd_ins DECIMAL (10,2) NOT NULL,
-    constraint tbl_insumo_id_pk primary key (id_ins),
-	constraint tbl_insumo_id_pac_fk foreign key (id_pac)
-    references tbl_paciente (id_pac)
+    constraint tbl_insumo_id_pk primary key (id_ins)
 );
 
 CREATE TABLE tbl_agenda (
@@ -59,11 +53,5 @@ CREATE TABLE tbl_agenda (
     id_med INT UNSIGNED NOT NULL,
     data_cir VARCHAR (10) NOT NULL,
     status_cir ENUM ("Agendado", "Concluído", "Cancelado") NOT NULL,
-    constraint tbl_agenda_id_pk primary key (id_agenda),
-	constraint tbl_agenda_id_pac_fk foreign key (id_pac)
-    references tbl_paciente (id_pac),
-    constraint tbl_agenda_id_sala_fk foreign key (id_sala)
-    references tbl_sala (id_sala),
-    constraint tbl_agenda_id_med_fk foreign key (id_med)
-    references tbl_medico (id_med)
+    constraint tbl_agenda_id_pk primary key (id_agenda)
 );
