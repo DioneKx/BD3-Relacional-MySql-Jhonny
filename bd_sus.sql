@@ -5,7 +5,7 @@ USE bd_sus;
 # drop database bd_sus;
 
 CREATE TABLE tbl_especialidade (
-	id_esp INT UNSIGNED AUTO_INCREMENT,
+	id_esp INT UNSIGNED AUTO_INCREMENT, #UNSIGNED rejeita qualquer numero (positivo ?)/negativo, aceitando apenas numeros sem sinais
     nome_esp VARCHAR (100) NOT NULL,
     constraint tbl_especialidade_id_pk primary key (id_esp)
 );
