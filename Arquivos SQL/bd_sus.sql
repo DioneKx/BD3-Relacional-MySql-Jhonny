@@ -38,6 +38,19 @@ CREATE TABLE tbl_paciente (
 	CONSTRAINT tbl_paciente_id_pk PRIMARY KEY (id_pac)
 );
 
+CREATE TABLE tbl_paciente_bkp (
+	id_pac INT UNSIGNED AUTO_INCREMENT,
+    nome_pac VARCHAR (500) NOT NULL,
+    email_pac VARCHAR (100) NOT NULL,
+    cel_pac VARCHAR (11) NOT NULL,
+    nome_resp VARCHAR (500) NOT NULL,
+    tel_resp VARCHAR (10) NOT NULL,
+	tel_pac VARCHAR (10),
+    date_delete DATETIME,
+	CONSTRAINT tbl_paciente_bkp_id_pk PRIMARY KEY (id_pac)
+);
+
+
 CREATE TABLE tbl_insumo (
 	id_ins INT UNSIGNED AUTO_INCREMENT,
     id_pac INT UNSIGNED NOT NULL,

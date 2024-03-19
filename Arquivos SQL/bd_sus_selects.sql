@@ -1,10 +1,13 @@
 #ARQUIVO DE SELECTS PARA O BANCO bd_sus.
 
+CREATE VIEW listagem_geral_paciente AS
+SELECT * FROM tbl_paciente;
+
+CREATE VIEW listagem_geral_paciente_bkp AS
+SELECT * FROM tbl_paciente_bkp;
+
 CREATE VIEW listagem_geral_med AS
 SELECT * FROM tbl_medico;
-
-SELECT * FROM listagem_geral_med
-WHERE id_med = 1;
 
 #LISTAGEM MÉDICO/ESPECIALIDADE
 
@@ -37,12 +40,20 @@ CREATE VIEW listagem_med_esp_sala AS (
 
 #SELECIONANDO VIEWS
 
+SELECT * FROM listagem_geral_paciente;
+SELECT * FROM listagem_geral_paciente_bkp;
+
+SELECT * FROM listagem_geral_med
+WHERE id_med = 2;
+
 SELECT * FROM listagem_med_esp_sala;
 SELECT * FROM listagem_agenda_esp;
 SELECT * FROM listagem_med_esp;
 
 #DROPANDO VIEWs
 
-DROP VIEW listagem_med_esp_sala;
-DROP VIEW listagem_agenda_esp;
-DROP VIEW listagem_med_esp;
+# DROP VIEW listagem_geral_paciente;
+# DROP VIEW listagem_geral_paciente_bkp;
+# DROP VIEW listagem_med_esp_sala;
+# DROP VIEW listagem_agenda_esp;
+# DROP VIEW listagem_med_esp;

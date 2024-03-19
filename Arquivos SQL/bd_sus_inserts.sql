@@ -61,3 +61,5 @@ VALUES (2, 3, 2, '15/10/2017', 'AGENDADO');
 
 INSERT INTO tbl_agenda(id_sala, id_med, id_pac, data_cir, status_cir)
 VALUES (1, 2, 3, '11/11/2017', 'AGENDADO');
+
+DELETE FROM tbl_paciente WHERE id_pac = 1;
