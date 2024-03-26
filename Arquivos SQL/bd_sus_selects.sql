@@ -1,4 +1,4 @@
-#ARQUIVO DE SELECTS PARA O BANCO bd_sus.
+#ARQUIVO DE SELECT'S DO bd_sus.
 
 CREATE VIEW listagem_geral_paciente AS
 SELECT * FROM tbl_paciente;
@@ -28,10 +28,11 @@ CREATE VIEW listagem_agenda_esp AS (
 #LISTAGEM AGENDA
 
 CREATE VIEW listagem_med_esp_sala AS (
-	SELECT c.num_sala AS Numero_Sala, b.nome_med AS Medico, b.cel_med AS Celular_Medico,
-	d.nome_pac AS Nome_Paciente, d.cel_pac AS Celular_Paciente, 
-	d.nome_resp AS Nome_Responsavel, d.tel_resp AS Numero_Responsavel,
-	a.data_cir AS Data_Cirurgia, a.status_cir AS Status_Cirurgia
+	SELECT 
+		c.num_sala AS Numero_Sala, b.nome_med AS Medico, b.cel_med AS Celular_Medico,
+		d.nome_pac AS Nome_Paciente, d.cel_pac AS Celular_Paciente, 
+		d.nome_resp AS Nome_Responsavel, d.tel_resp AS Numero_Responsavel,
+		a.data_cir AS Data_Cirurgia, a.status_cir AS Status_Cirurgia
 	FROM tbl_agenda AS a
 	INNER JOIN tbl_medico AS b ON b.id_med = a.id_med
 	INNER JOIN tbl_sala AS c ON c.id_sala = a.id_sala
@@ -40,6 +41,7 @@ CREATE VIEW listagem_med_esp_sala AS (
 
 #SELECIONANDO VIEWS
 
+/*
 SELECT * FROM listagem_geral_paciente;
 SELECT * FROM listagem_geral_paciente_bkp;
 
@@ -49,6 +51,7 @@ WHERE id_med = 2;
 SELECT * FROM listagem_med_esp_sala;
 SELECT * FROM listagem_agenda_esp;
 SELECT * FROM listagem_med_esp;
+*/
 
 #DROPANDO VIEWs
 

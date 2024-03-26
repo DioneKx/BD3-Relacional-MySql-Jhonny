@@ -1,4 +1,4 @@
-#ARQUIVO DE INSERTS NO BANCO.
+#ARQUIVO DE INSERT'S NO BANCO.
 
 #INSERÇÃO DE DADOS NA TABELA DE ESPECIALIDADES.
 
@@ -42,7 +42,8 @@ VALUES (3, 'CARLOS ALBERT', 'carlos.albert@gmail.com', '0551-9990', '1494-5625')
 INSERT INTO TBL_MEDICO(id_esp, nome_med, email_med, tel_med, cel_med)
 VALUES (1, 'JUNIOR ALBERTO', 'j.alberto@gmail.com', '1234-5678', '7855-5413');
 
-#INSERÇÃO DE DADOS NA TABELA DE SALAS.
+#INSERÇÃO DE DADOS NAS TABELAS DO bd_sus
+
 INSERT INTO tbl_sala(num_sala, id_esp)
 VALUES ('SALA 01', 1);
 
@@ -57,9 +58,12 @@ INSERT INTO tbl_agenda(id_sala, id_med, id_pac, data_cir, status_cir)
 VALUES (1, 4, 5, '05/09/2017', 'AGENDADO');
 
 INSERT INTO tbl_agenda(id_sala, id_med, id_pac, data_cir, status_cir)
+VALUES (3, 1, 1, '15/12/2017', 'AGENDADO');
+
+INSERT INTO tbl_agenda(id_sala, id_med, id_pac, data_cir, status_cir)
 VALUES (2, 3, 2, '15/10/2017', 'AGENDADO');
 
 INSERT INTO tbl_agenda(id_sala, id_med, id_pac, data_cir, status_cir)
 VALUES (1, 2, 3, '11/11/2017', 'AGENDADO');
 
-DELETE FROM tbl_paciente WHERE id_pac = 1;
+# DELETE FROM tbl_paciente WHERE id_pac = 1;

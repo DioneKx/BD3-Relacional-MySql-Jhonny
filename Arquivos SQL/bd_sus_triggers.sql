@@ -1,4 +1,4 @@
-#Arquivo para armazenar as TRIGGERS da tabela bd_sus;
+#ARQUIVO DE TRIGGER'S DAS TABELAS DO bd_sus;
 
 USE bd_sus;
 
@@ -24,8 +24,9 @@ tel_resp = OLD.tel_resp,
 tel_pac = OLD.tel_pac,
 date_delete = NOW();
 
-#Criação do delimitador de fim da Trigger
+#Finalizador das instruções p/execução da TRIGGER
 END
+#Encerrando a área que define o corpo da TRIGGER
 $
 
 #DROP TRIGGER trg_delete_pac;
